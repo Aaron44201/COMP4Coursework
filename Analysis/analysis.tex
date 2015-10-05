@@ -3,43 +3,112 @@
 \section{Introduction}
 
 \subsection{Client Identification}
-
+The client is a music collector that has a large collection of CD’s that does this for a hobby. The reason they are looking for a new system is that the collection has grown too large to hold memory of what he has and would like a digital record of the collection that he can input data easily and to avoid buying duplicates of CD’s.
 \subsection{Define the current system}
 
+The current system is a manual system where the CD’s are put into a series of CD racks alphabetically with no record of what is contained within the bookcases. 
+Currently to find out what is in the system they have to go and search the CD racks and the collection has grown to over 500 CD's but the client prefers to have physical copies of the albums and does not like buying them online and prefers to go and buy them from shops and quite often it is hard to remember what albums are in the collection. 
+Also when moving the CD's it can take time to re organise them into alphabetical order going through and looking at each one so this is time consuming.
+
 \subsection{Describe the problems}
+The problem with the current system is that is a manual method with  no digital record of whats contained within the system and this means it can take hours of sorting manually and trying to work out the order.
+Another majour issue with the system is that there is currently no way of easily telling what tracks are on each album without having to search through the massive collection.
+The other huge issue with the system is that there is no way of telling what is in the collection so whilst shopping it can cause the client to buy duplicate albums which is not only a waste of time but a waste of money so this system is also important to save the client money. 
 
 \subsection{Section appendix}
+Below is the questionair that my client completed
+
+What is the proposed system to do?  
+Organise a music collection alphabetically and it must be easy and quick to enter the collection
+What are the problems with the current way of doing things? The quantity and areas they are stored in
+What data or information is recorded in the current system?
+ None
+What data or information is to be recorded in the proposed system?
+ Artist name, Album title, Track list and Genre
+How much data will the proposed system record?
+The system will need to hold my current collection of around 600 albums and 
+Will new records need to be added or old ones deleted? How often?
+ Yes Monthly
+Will the changes come in batches or in ones and twos?
+ Batches/multiple albums at a time
+How important is the data or information that is recorded?
+Very 
+Is security and issue? 
+Yes user login required
+What does the system need to be capable of doing?
+Logging and storing new entries and list everything alphabetically
+What are the outputs from the current system?
+None
+What computing resources does the client possess? 1x Laptop
+
 
 \section{Investigation}
 
 \subsection{The current system}
 
 \subsubsection{Data sources and destinations}
-
+In the current system is where the CD or album is purchased from a shop and then the album is taken back to his house and stored aphabetically in a book case.
+Once in the book case there is only a notepad that contains the list of the 
 \subsubsection{Algorithms}
-
+In the current system there is no algorithms used as it is a manual method. 
 \subsubsection{Data flow diagram}
 
 \subsubsection{Input Forms, Output Forms, Report Formats}
-
+There is no record of anything inputed or outputed 
 \subsection{The proposed system}
 
 \subsubsection{Data sources and destinations}
-
+\begin{center}
+ \begin{tabular}{||c |c |c ||} \\
+ \hline
+ Data & Source & Destination   \\ [0.5ex] 
+ \hline
+ User & User input & UserDatabase  \\ 
+ \hline
+ Users Access & User input & Userdatabase  \\
+ \hline
+ Password & Userinput & Userdatabase \\
+ \hline
+ Album Name & User input & Albumdatabase  \\
+ \hline
+ Album Artwork & Spotify API & Albumdatabase  \\
+ \hline
+ Track Name & Spotify API & TrackListDatabase  \\
+ \hline
+ Track length & Spotify API & TrackListDatabase  \\
+ \hline
+ Tracks Album &  & Albumdatabase  [1ex] \\
+ \hline
+\end{tabular}
+\end{center}
 \subsubsection{Data flow diagram}
 
 \subsubsection{Data dictionary}
+\begin{center}
+ \begin{tabular}{||c |c |c |c |c |c||} 
+ \hline
+ Name & Data Type & Length & Validation & Example Data & Comment   \\ [0.5ex] 
+ \hline
+ UserID & Integer & 8 & 8 digits& 80808080& Number individual to user  \\ 
+ \hline
+UserForename & String & 20 & Must exist & John& - \\
+\hline
+
+ Tracks Album &  & Albumdatabase  [1ex] \\
+ \hline
 
 \subsubsection{Volumetrics}
+
+The proposed system should be able to store 600 albums with artwork and track lists to begin with based on the clients current collection and should potentially be able to expand up to 2000 albums stored.
 
 \section{Objectives}
 
 \subsection{General Objectives}
-
+The general objective is to create a user friendly database with clear and easy user interface for relativly new usersl.
 \subsection{Specific Objectives}
-
+It need to be capable of adding more albums and correcting the saved data and track lists if errors may occur
 \subsection{Core Objectives}
-
+The system must use API to get the albums artwork and tracklist to save time on inputing data.  
 \subsection{Other Objectives}
 
 \section{ER Diagrams and Descriptions}
@@ -61,20 +130,22 @@
 \section{Constraints}
 
 \subsection{Hardware}
+The only hardware availible is a Asus Laptop that will be capable of running and storing all data
 
 \subsection{Software}
-
+No preference
 \subsection{Time}
-
+Deadline set by teacher
 \subsection{User Knowledge}
-
+The user is not very confident with computers so requires a very simple interface.
 \subsection{Access restrictions}
-
+Users will be added to the system so that a login is required to access the data
 \section{Limitations}
-
+The only limitations will be time to complete the project
 \subsection{Areas which will not be included in computerisation}
-
+The storage of the actual music due to not enough space
 \subsection{Areas considered for future computerisation}
+Adding the storage of the music
 
 \section{Solutions}
 
